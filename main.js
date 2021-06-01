@@ -34,9 +34,16 @@ function calculate() {
   let map = document.querySelector('#circuit').value;
   let sped = document.querySelector('#laptime').value/3600;
       
-  let value = 0;
   
-  
+  if (map == 'ITA') {
+    map = 5.793;
+  } else if (map == 'HUN') {
+    map = 4.381;
+  } else if (map == 'MON') {
+    map = 3.337;
+  } else {
+    map = 7.004;
+  }
 
   let final = map/sped;
 
